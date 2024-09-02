@@ -26,7 +26,7 @@
         }
         .navbar-nav {
             margin-left: auto; /* Push the nav items to the right */
-            margin-right: 10%; /* Space from the right edge (10% of screen width) */
+            margin-right: 3%; /* Space from the right edge (10% of screen width) */
         }
         .navbar-nav .nav-item {
             margin-left: 15px; /* Spacing between navbar links */
@@ -46,6 +46,35 @@
                 margin-left: 0; /* Remove margin between links on smaller screens */
             }
         }
+        .shadow-row {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .form-container {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .full-width {
+            width:100%;
+        }
+        
+        .height-20 {
+            height: 20%;
+        }
+        .height-80 {
+            height: 80%;
+        }
+        .img-with-text {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .btn-full-width {
+            width: 100%;
+        }
+
     </style>
 </head>
 <body>
@@ -61,7 +90,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <!-- Navbar Links aligned to the right with 10% spacing -->
+            <!-- Navbar Links aligned to the right with 3% spacing -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
@@ -110,81 +139,151 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <p>Some text beside the image.</p>
+                <div class="text-center">
+                    <h1>Header Text</h1>
+                    <h2>Semi Header</h2>
+                    <p>Some text beside the image.</p>
+                    <a href="#" class="btn btn-primary">Click Me</a> <!-- Added Button -->
+                </div>
             </div>
         </div>
 
-        <!-- Row 2: 6 Forms -->
-        <div class="row mt-5">
-            <div class="col-md-2">
-                <div class="form-group">
-                    <label for="input1">Input 1</label>
-                    <input type="text" class="form-control" id="input1">
+        <!-- Row 2: Contains Shadow and Various Rows -->
+        <div class="row mt-5 shadow-row">
+            <!-- Row 1 inside second row: Header -->
+            <div class="col-12 mb-4">
+                <h3>Main Header for Forms Section</h3>
+            </div>
+
+            <!-- Row 2 inside second row: 2 Columns with Form in Each -->
+            <div class="row mb-4 full-width">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form1">Form 1</label>
+                        <input type="text" class="form-control" id="form1">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form2">Form 2</label>
+                        <input type="text" class="form-control" id="form2">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="form-group">
-                    <label for="input2">Input 2</label>
-                    <input type="text" class="form-control" id="input2">
+
+            <!-- Row 3 inside second row: 3 Columns with Form in Each -->
+            <div class="row mb-4 full-width">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="form3">Form 3</label>
+                        <input type="text" class="form-control" id="form3">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="form4">Form 4</label>
+                        <input type="text" class="form-control" id="form4">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="form5">Form 5</label>
+                        <input type="text" class="form-control" id="form5">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="form-group">
-                    <label for="input3">Input 3</label>
-                    <input type="text" class="form-control" id="input3">
+
+            <!-- Row 4 inside second row: Div with Border and Text -->
+            <div class="col-12 mb-4">
+                <div class="form-container">
+                    <p>Some text inside a bordered div aligned to the left.</p>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="form-group">
-                    <label for="input4">Input 4</label>
-                    <input type="text" class="form-control" id="input4">
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="form-group">
-                    <label for="input5">Input 5</label>
-                    <input type="text" class="form-control" id="input5">
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="form-group">
-                    <label for="input6">Input 6</label>
-                    <input type="text" class="form-control" id="input6">
-                </div>
+
+            <!-- Row 5 inside second row: Submit Button for All Forms -->
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">Submit All Forms</button>
             </div>
         </div>
 
         <!-- Row 3: 2 Columns with Text and Image -->
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <p>Text beside the image.</p>
+        <div class="row mt-5 ">
+            <!-- First Row: Header (2/10 of the height) -->
+            <div class="col-12 height-20 d-flex align-items-center justify-content-center">
+                <h3 class="font-weight-bold">Main Header in Bold Text</h3>
+            </div>
+        </div>
+
+        <div class="row height-80">
+            <!-- Second Row: Two Columns -->
+            <div class="col-md-6 d-flex align-items-center">
+                <p>Text content in the left column. This column occupies 50% of the width and contains textual information.</p>
             </div>
             <div class="col-md-6">
-                <div class="img-placeholder">
-                    Image 2
+                <!-- Inner Rows for Right Column -->
+                <div class="row">
+                    <div class="col-md-6 img-with-text">
+                        <div class="img-placeholder">
+                            Image 1
+                        </div>
+                        <p>Text under Image 1.</p>
+                    </div>
+                    <div class="col-md-6 img-with-text">
+                        <div class="img-placeholder">
+                            Image 2
+                        </div>
+                        <p>Text under Image 2.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 img-with-text">
+                        <div class="img-placeholder">
+                            Image 3
+                        </div>
+                        <p>Text under Image 3.</p>
+                    </div>
+                    <div class="col-md-6 img-with-text">
+                        <div class="img-placeholder">
+                            Image 4
+                        </div>
+                        <p>Text under Image 4.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Row 4: 3 Columns with Image and Text Underneath -->
         <div class="row mt-5">
-            <div class="col-md-4">
-                <div class="img-placeholder">
-                    Image 3
-                </div>
-                <p>Text under image 3.</p>
+            <!-- First Row: Header (2/10 of the height) -->
+            <div class="col-12 height-20 d-flex align-items-center justify-content-center">
+                <h3 class="font-weight-bold">Another Header in Bold Text</h3>
             </div>
-            <div class="col-md-4">
-                <div class="img-placeholder">
-                    Image 4
-                </div>
-                <p>Text under image 4.</p>
-            </div>
-            <div class="col-md-4">
+        </div>
+
+        <div class="row height-80">
+            <!-- Second Row: Three Columns -->
+            <div class="col-md-4 img-with-text">
+                <p>Text above Image 5.</p>
                 <div class="img-placeholder">
                     Image 5
                 </div>
-                <p>Text under image 5.</p>
+                
+                <button type="button" class="btn btn-primary btn-full-width">Button 5</button>
+            </div>
+            <div class="col-md-4 img-with-text">
+                <p>Text above Image 6.</p>
+                <div class="img-placeholder">
+                    Image 6
+                </div>
+                
+                <button type="button" class="btn btn-primary btn-full-width">Button 6</button>
+            </div>
+            <div class="col-md-4 img-with-text">
+                <p>Text above Image 7.</p>
+                <div class="img-placeholder">
+                    Image 7
+                </div>
+               
+                <button type="button" class="btn btn-primary btn-full-width">Button 7</button>
             </div>
         </div>
 
@@ -212,13 +311,4 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-light text-center py-4 mt-5">
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+   
