@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Layout Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 200vh; /* To ensure two pages worth of scrolling */
+        }
+        .img-placeholder {
+            background-color: #ddd;
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar {
+            padding: 10px;
+        }
+        .navbar-brand {
+            margin-right: auto; /* Push the brand to the left */
+        }
+        .navbar-nav {
+            margin-left: auto; /* Push the nav items to the right */
+            margin-right: 10%; /* Space from the right edge (10% of screen width) */
+        }
+        .navbar-nav .nav-item {
+            margin-left: 15px; /* Spacing between navbar links */
+        }
+        .navbar-toggler {
+            margin-left: 0; /* Remove margin from toggler to align with left edge */
+        }
+        @media (max-width: 992px) {
+            .navbar-nav {
+                margin-right: 0; /* Remove margin on smaller screens */
+                margin-left: 0; /* Remove margin on smaller screens */
+            }
+            .navbar-toggler {
+                margin-left: 0; /* Ensure toggler is aligned properly on smaller screens */
+            }
+            .navbar-nav .nav-item {
+                margin-left: 0; /* Remove margin between links on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- Navbar Brand (Title) aligned to the left -->
+            <a class="navbar-brand" href="#">Navbar</a>
+            
+            <!-- Navbar Toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navbar Links aligned to the right with 10% spacing -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-5">
+        
+        <!-- Row 1: 2 Columns with Image and Text -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="img-placeholder">
+                    Image 1
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Some text beside the image.</p>
+            </div>
+        </div>
+
+        <!-- Row 2: 6 Forms -->
+        <div class="row mt-5">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="input1">Input 1</label>
+                    <input type="text" class="form-control" id="input1">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="input2">Input 2</label>
+                    <input type="text" class="form-control" id="input2">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="input3">Input 3</label>
+                    <input type="text" class="form-control" id="input3">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="input4">Input 4</label>
+                    <input type="text" class="form-control" id="input4">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="input5">Input 5</label>
+                    <input type="text" class="form-control" id="input5">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="input6">Input 6</label>
+                    <input type="text" class="form-control" id="input6">
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3: 2 Columns with Text and Image -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <p>Text beside the image.</p>
+            </div>
+            <div class="col-md-6">
+                <div class="img-placeholder">
+                    Image 2
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 4: 3 Columns with Image and Text Underneath -->
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="img-placeholder">
+                    Image 3
+                </div>
+                <p>Text under image 3.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="img-placeholder">
+                    Image 4
+                </div>
+                <p>Text under image 4.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="img-placeholder">
+                    Image 5
+                </div>
+                <p>Text under image 5.</p>
+            </div>
+        </div>
+
+        <!-- Row 5: 3 Columns with Image and Text Underneath -->
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="img-placeholder">
+                    Image 6
+                </div>
+                <p>Text under image 6.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="img-placeholder">
+                    Image 7
+                </div>
+                <p>Text under image 7.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="img-placeholder">
+                    Image 8
+                </div>
+                <p>Text under image 8.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4 mt-5">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
